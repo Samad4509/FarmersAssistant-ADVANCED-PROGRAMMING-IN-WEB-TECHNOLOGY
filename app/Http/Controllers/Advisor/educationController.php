@@ -17,6 +17,16 @@ class educationController extends Controller
     {
         // dd($request->all());
 
+        $request->validate([
+
+            'institution' => 'required',
+            'added_at' => 'required',
+            'graduate_at' => 'required',
+            'advisor_id' => 'required',
+
+        ]);
+
+
         $usetable = new education_qualifications();
 
         $usetable->institution = $request->institution;
@@ -68,6 +78,7 @@ class educationController extends Controller
         return redirect('/list');
 
     }
+
 
 
 }

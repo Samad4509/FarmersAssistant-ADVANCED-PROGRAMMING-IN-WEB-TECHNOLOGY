@@ -13,6 +13,17 @@ class RepliesController extends Controller
     }
     public function reply(Request $request)
     {
+        $request->validate([
+
+            'created_at' => 'required',
+            'tittle' => 'required',
+            'body' => 'required',
+            'advisor_id' => 'required',
+            'mails_id' => 'required',
+
+
+        ]);
+
         $usetable = new Replies();
         $usetable->created_at = $request->created_at;
         $usetable->tittle= $request->tittle;
@@ -20,7 +31,7 @@ class RepliesController extends Controller
         $usetable->mails_id = $request->mails_id;
         $usetable->advisor_id = $request->advisor_id;
         $usetable->save();
-        return back();
+        return redirect('/show');
         // dd($request->all());
     }
 

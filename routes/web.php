@@ -161,3 +161,12 @@ Route::get('delete/{id}',[RepliesController::class,'deleteReplies']);
 
 Route::get('edit2/{id}',[RepliesController::class,'ShowReply']);
 Route::post('/edit2',[RepliesController::class,'RepliesUpdate']);
+
+Route::get('/list3',[AdvisorRegContoller::class,'Myprofile']);
+Route::get('edit3/{id}',[AdvisorRegContoller::class,'Showprofile']);
+
+Route::post('/edit3',[AdvisorRegContoller::class,'ProfileUpdate']);
+
+// Route::group(['middleware'=>"register"],function(){
+
+// });

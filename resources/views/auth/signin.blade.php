@@ -1,7 +1,15 @@
 @extends('layouts.app')
 @section('content')
     <div class="flex justify-center items-center h-screen">
-        <form action="login" method="POST">
+        <form action="login" method="POST" action="">
+
+            @if(Session::has('success'))
+                <div class="alert alert-success">{{Session::get('success')}}</div>
+                @endif
+
+                @if(Session::has('fail'))
+                <div class="alert alert-danger">{{Session::get('fail')}}</div>
+                @endif
             @csrf
             <div class="flex flex-col bg-gray-900 rounded md:px-8 py-10">
                 <h1 class=" text-2xl font-bold text-gray-200 text-center mb-8 md:text-3xl md:mb-10">Sign in to your account

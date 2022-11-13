@@ -32,9 +32,9 @@ body {
 <form action="/startupdate" method="post">
 @csrf
     <span style="color:rgb(248, 248, 248)" style="text-align: center"><b>Profile</b></span><br>
-    <span style="color:rgb(248, 248, 248)"><b></b></span> <input type="hidden" name="id" value="{{ Auth::user()->id}}"><br><br>
-    <span style="color:rgb(248, 248, 248)"><b>firstName</b></span> <input type="text" name="firstName" value="{{ Auth::user()->firstName}}"><br><br>
-    <span style="color:rgb(248, 248, 248)"><b>lastName</b></span> <input type="text" name="lastName" value="{{ Auth::user()->lastName}}"><br><br>
+    <span style="color:rgb(248, 248, 248)"><b>ID</b></span> <input type="hidden" name="id" value="{{ Auth::user()->id}}"><br><br>
+    <span style="color:rgb(248, 248, 248)"><b>firstName</b></span> <input type="text" name="firstname" value="{{ Auth::user()->firstName}}"><br><br>
+    <span style="color:rgb(248, 248, 248)"><b>lastName</b></span> <input type="text" name="lastname" value="{{ Auth::user()->lastName}}"><br><br>
     <span style="color:rgb(248, 248, 248)"><b>UserName</b></span> <input type="text" name="username" value="{{ Auth::user()->username}}"><br><br>
     <span style="color:rgb(248, 248, 248)"><b>Email</b></span> <input type="text" name="email" value="{{ Auth::user()->email}}"><br><br>
     <span style="color:rgb(248, 248, 248)"><b>Password</b></span> <input type="text" name="password" value="{{ Auth::user()->password}}"><br><br>

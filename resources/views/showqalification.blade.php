@@ -50,4 +50,5 @@ body {
     </tr>
 
     @endforeach
+    <button type="submit" class=""><a href="/show">Back to dashboard</a></button>
 </table>

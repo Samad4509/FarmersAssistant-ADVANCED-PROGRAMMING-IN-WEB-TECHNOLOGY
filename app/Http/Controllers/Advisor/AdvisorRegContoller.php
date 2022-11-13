@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\User as AuthUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Models\updateShows;
 
 class AdvisorRegContoller extends Controller
 {
@@ -56,26 +57,6 @@ class AdvisorRegContoller extends Controller
 
             ]);
 
-
-
-
-
-
-
-
-            // //create a instance of the admin
-            // Advisors::create([
-            //     'user_id' => $advisor->id,
-            // ]);
-
-            // $advisor = User::find($advisor->id);
-            // // Log the admin in
-            // Auth::login($advisor);
-
-            // // Redirect to the admin dashboard
-            // //get all admins info
-            // return redirect('show');
-
             Advisors::create([
                 'user_id' => $advisor->id,
             ]);
@@ -89,5 +70,44 @@ class AdvisorRegContoller extends Controller
             //get all farmers info
             return back();
         }
+
+
     }
+
+    public function Myprofile()
+    {
+
+        $data=User::all();
+        return view('advisorshowprofile',['User'=>$data]);
+
+
+    }
+    public function Showprofile($id)
+    {
+        $data=User::find($id);
+        return view('AdvisorUpdateProfile',['data'=>$data]);
+        return redirect('/edit3');
+    }
+
+    public function ProfileUpdate(Request $req)
+    {
+        // return $req->input();
+        $data=User::find($req->id);
+        $data->firstname = $req->firstname;
+        $data->lastname= $req->lastname;
+        $data->username = $req->username;
+        $data->email = $req->email;
+        $data->dob = $req->dob;
+        $data->gender= $req->gender;
+        $data->city = $req->city;
+        $data->postalCode= $req->postalcode;
+        $data->address = $req->address;
+        $data->phone= $req->phone;
+        $data->created_at = $req->created_at;
+        $data->save();
+        return redirect('/list3');
+
+    }
+
+
 }
