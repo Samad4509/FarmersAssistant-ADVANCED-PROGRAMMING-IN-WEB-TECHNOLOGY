@@ -18,6 +18,9 @@ use App\Http\Controllers\Advisor\AdvisorRegContoller;
 use App\Http\Controllers\Advisor\educationController;
 use App\Http\Controllers\Advisor\DashbordsController;
 use App\Http\Controllers\Advisor\RepliesController;
+use App\Http\Controllers\MailController2;
+use App\Http\Controllers\SendEmailController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -145,12 +148,11 @@ Route::post('/edit',[educationController::class,'Update']);
 // Route::get('rdvisor/ad_profile1', function () {
 //     return view('dashboards.advisor');
 // })->name("advisors.dashboard");
+//Dashbord
 Route::get('/show',[DashbordsController::class,'Dashbord'])->name("advisors.dashboard");
 Route::post('/startupdate', [DashbordsController::class, 'UpdateDashbord'])->middleware('adminupdatecheck');
 
-
-
-Route::get('/qualificationShow',[DashbordsController::class,'qualificationShow']);
+//Route::get('/qualificationShow',[DashbordsController::class,'qualificationShow']);
 
 //Replies
 Route::get('/reply',[RepliesController::class,'Replies']);
@@ -161,12 +163,26 @@ Route::get('delete/{id}',[RepliesController::class,'deleteReplies']);
 
 Route::get('edit2/{id}',[RepliesController::class,'ShowReply']);
 Route::post('/edit2',[RepliesController::class,'RepliesUpdate']);
-
+//Profile
 Route::get('/list3',[AdvisorRegContoller::class,'Myprofile']);
 Route::get('edit3/{id}',[AdvisorRegContoller::class,'Showprofile']);
 
 Route::post('/edit3',[AdvisorRegContoller::class,'ProfileUpdate']);
 
-// Route::group(['middleware'=>"register"],function(){
 
-// });
+Route::get('/react', function () {
+    return view('react');
+});
+
+Route::get('/singupreact', function () {
+    return view('singupreact');
+});
+
+Route::get('send-email', [SendEmailController::class, 'index']);
+
+Route::get('/sendemail', [MailController2::class,'index']);
+Route::post('/sendemail/send',[MailController2::class,'send']);
+
+Route::get('/singupreact1', function () {
+    return view('Register');
+});

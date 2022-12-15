@@ -41,11 +41,11 @@ class DashbordsController extends Controller
     }
 
 
-   public function qualificationShow(){
+//    public function qualificationShow(){
 
-    return view('auth.Advisors.qualification_show');
+//     return view('auth.Advisors.qualification_show');
 
-   }
+//    }
 
 
 

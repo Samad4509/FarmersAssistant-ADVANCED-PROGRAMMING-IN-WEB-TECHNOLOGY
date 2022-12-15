@@ -2,9 +2,9 @@
 <html>
 <head>
 <style>
-.center{
+<style>
+    .center{
         margin: auto;
-        height: 600px;
         width: 600px;
         border: 3px solid #15c8eb;
         padding: 10px;
@@ -12,16 +12,9 @@
     span{
         display: inline-block;
         width: 80px;
-        text-align: 3px solid #fdffff;
     }
-
-    body {background-color: rgba(147, 244, 11, 0.3);}
-
-
-
-body {
-  background-color: #333396;
-}
+    body {background-color: rgb(31, 41, 55);}
+    </style>
 
 </style>
 <h1>Update Replies Box</h1>

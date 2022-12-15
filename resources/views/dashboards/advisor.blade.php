@@ -59,7 +59,6 @@ padding-top: 80px;
         <li><a href="/list">Qualification show</a></li>
         <li><a href="/reply">Add Replies</a></li>
         <li><a href="/list2">Show Replies Box</a></li>
-        <li><a href="#">Contact</a></li>
         <li><a href="/logout">logout</a></li>
 
       </ul>
