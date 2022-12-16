@@ -14,3 +14,4 @@ import './bootstrap';
 
 import './components/Example';
 import './components/Register';
+import './components/Education';

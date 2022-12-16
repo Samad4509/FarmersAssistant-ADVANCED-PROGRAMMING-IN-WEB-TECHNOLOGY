@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\UserApiController;
 use App\Http\Controllers\Api\RegisterApiController;
 use App\Http\Controllers\Api\EducationController;
+use App\Http\Controllers\Api\Reply;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,7 @@ Route::get('/education', [EducationController::class,'Education']);
 Route::post('/add-education', [EducationController::class,'AddEducation']);
 Route::put('/update-education/{id}', [EducationController::class,'UpdateEducation']);
 Route::delete('/delete-single-education/{id}', [EducationController::class,'DeleteEducation']);
+
+//replies
+Route::get('/reply', [Reply::class,'reply']);
+Route::post('/add-reply', [Reply::class,'Addreply']);

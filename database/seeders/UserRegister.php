@@ -16,7 +16,7 @@ class UserRegister extends Seeder
     public function run()
     {
         $users=[
-            ['firstname'=>'Rafi','lastname'=>'Robi','username'=>'Rafi100','email'=>'abcd@gmail.com','Password'=>'123456','gender'=>'male','city'=>'Dhaka','postalCode'=>'1229','address'=>'Dhaka','phone'=>'01791779238']
+            ['firstname'=>'Rafie','lastname'=>'Robie','username'=>'Rafi1000','email'=>'abscd@gmail.com','Password'=>'123456','gender'=>'male','city'=>'Dhaka','postalCode'=>'1229','address'=>'Dhaka','phone'=>'01791779238']
 
             ];
             User::insert($users);

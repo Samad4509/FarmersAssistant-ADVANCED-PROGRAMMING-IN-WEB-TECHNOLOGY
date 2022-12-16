@@ -186,3 +186,11 @@ Route::post('/sendemail/send',[MailController2::class,'send']);
 Route::get('/singupreact1', function () {
     return view('Register');
 });
+
+Route::get('/reactview', function () {
+    return view('reactview');
+});
+
+Route::get('/education', function () {
+    return view('Education');
+});
